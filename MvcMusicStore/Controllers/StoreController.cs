@@ -26,11 +26,11 @@ namespace MvcMusicStore.Controllers
         }
 
         //
-        // GET: /Store/Details
+        // GET: /Store/Details/<some ID>
 
-        public string Details()
+        public string Details(int id)
         {
-            return "In StoreController.Details();";
+            return "In StoreController.Details(); the ID is " + id;
         }
     }
 }
