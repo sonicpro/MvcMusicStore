@@ -2,7 +2,7 @@
 
 namespace MvcMusicStore.Models
 {
-	public class MusicStoreDB : DbContext
+	public class MusicStoreDb : DbContext
 	{
         // You can add custom code to this file. Changes will not be overwritten.
         // 

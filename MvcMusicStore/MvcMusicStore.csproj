@@ -71,7 +71,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
-    <Compile Include="Models\MusicStoreDB.cs" />
+    <Compile Include="Models\MusicStoreDb.cs" />
     <Compile Include="MusicStoreDBInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

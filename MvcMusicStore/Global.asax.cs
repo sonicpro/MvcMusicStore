@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity;
+using MvcMusicStore.Models;
 
 namespace MvcMusicStore
 {
@@ -31,6 +33,8 @@ namespace MvcMusicStore
 
         protected void Application_Start()
         {
+        	Database.SetInitializer<MusicStoreDb>(new MusicStoreDbInitializer());
+
             AreaRegistration.RegisterAllAreas();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
