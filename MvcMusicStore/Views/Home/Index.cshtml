@@ -2,7 +2,13 @@
     ViewBag.Title = "Home Page";
 }
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+<h2 id="welcome-message">Welcome to our website</h2>
+
+@if(!string.IsNullOrWhiteSpace(ViewBag.UserName)) {
+	<script type="text/javascript">
+		$(function () {
+			var message = 'Welcome, @Ajax.JavaScriptStringEncode(ViewBag.UserName)!';
+			$("#welcome-message").html(message).hide().show('slow');
+		});
+	</script>
+}

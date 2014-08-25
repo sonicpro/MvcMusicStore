@@ -8,12 +8,12 @@ namespace MvcMusicStore.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+		public ActionResult Index(string UserName)
+		{
+			ViewBag.UserName = UserName;
 
-            return View();
-        }
+			return View();
+		}
 
         public ActionResult About()
         {
