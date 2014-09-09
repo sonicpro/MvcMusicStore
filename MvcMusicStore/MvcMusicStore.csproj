@@ -81,6 +81,7 @@
     <Compile Include="Models\ShoppingCart.cs" />
     <Compile Include="MusicStoreDBInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Samples\ActionLink\ActionLinkController.cs" />
     <Compile Include="Samples\Validation\MaxWordsAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Store\Buy.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ActionLink\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ActionLink\_DailyDeal.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
