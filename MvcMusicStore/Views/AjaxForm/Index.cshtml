@@ -1,0 +1,36 @@
+﻿@using MvcMusicStore.Models
+@model List<Album>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+
+@section scripts{
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Samples/AjaxForm/MusicScripts.js")" type="text/javascript"></script>
+}
+
+<div id="promotion">
+</div>
+
+@using (Ajax.BeginForm("ArtistSearch", "AjaxForm", 
+    new AjaxOptions {
+     InsertionMode=InsertionMode.Replace,
+     HttpMethod="GET",
+     OnFailure="searchFailed",     
+     LoadingElementId="ajax-loader",
+     UpdateTargetId="searchresults",               
+}))
+{
+    <input type="text" name="q" />
+    <input type="submit" value="search" />
+    <img id="ajax-loader" 
+         src="@Url.Content("~/Content/Images/ajax-loader.gif")" 
+         style="display:none"
+		 alt="Loading..."/>
+}
+
+<div id="searchresults">
+
+</div>
+
+
