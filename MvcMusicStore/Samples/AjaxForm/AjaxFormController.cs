@@ -21,18 +21,8 @@ namespace MvcMusicStore.Controllers
             return View(albums);
         }
 
-        public ActionResult ArtistSearch(string q)
-        {
-            var artists = GetArtists(q);
-            return PartialView("_ArtistSearch", artists);
-        }
 
-        private List<Artist> GetArtists(string searchString)
-        {
-            return storeDB.Artists
-                .Where(a => a.Name.Contains(searchString))
-                .ToList();
-        }
+		#region Helper methods
 
         private List<Album> GetTopSellingAlbums(int count)
         {
@@ -43,5 +33,7 @@ namespace MvcMusicStore.Controllers
                 .Take(count)
                 .ToList();
         }
+
+		#endregion
     }
 }

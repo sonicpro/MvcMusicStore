@@ -26,7 +26,24 @@ namespace MvcMusicStore.Controllers
             var album = GetDailyDeal();
             return PartialView("_DailyDeal", album);
         }
-        
+
+		public ActionResult QuickSearch(string term)
+		{
+			// The JSON for autocomplete widget must return either both value and label propertied, or both the properties.
+			var artists = GetArtists(term).Select(n => new { value = n.Name });
+			return Json(artists, JsonRequestBehavior.AllowGet);
+		}
+
+
+		#region Helper methods
+
+		private List<Artist> GetArtists(string searchString)
+		{
+			return storeDB.Artists
+				.Where(a => a.Name.Contains(searchString))
+				.ToList();
+		}
+
         private Album GetDailyDeal()
         {
             return storeDB.Albums
@@ -44,5 +61,7 @@ namespace MvcMusicStore.Controllers
                 .Take(count)
                 .ToList();
         }
+
+		#endregion
     }
 }
