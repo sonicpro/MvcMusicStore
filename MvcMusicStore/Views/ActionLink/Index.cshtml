@@ -5,7 +5,7 @@
 }
 
 @section links {
-	<link href="@Url.Content("~/Content/themes/base/jquery.ui.autocomplete.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
 }
 
 @section scripts {
@@ -18,7 +18,7 @@
 </div>
 
 <form id="artistSearch" method="get" action="@Url.Action("ArtistSearch", "Home")">
-    <input type="text" name="q" data-autocomplete-source="@Url.Action("QuickSearch", "ActionLink")" />
+    <input type="text" name="q" data-autocomplete-source="@Url.Action("QuickSearch", "ActionLink")"	/>
     <input type="submit" value="search" />
     <img id="ajax-loader" src="@Url.Content("~/Content/Images/ajax-loader.gif")" style="display:none"/>
 </form>
