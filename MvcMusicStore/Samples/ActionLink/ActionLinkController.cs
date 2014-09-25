@@ -34,7 +34,6 @@ namespace MvcMusicStore.Controllers
 			return Json(artists, JsonRequestBehavior.AllowGet);
 		}
 
-
 		#region Helper methods
 
 		private List<Artist> GetArtists(string searchString)
