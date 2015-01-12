@@ -29,7 +29,7 @@ namespace MvcMusicStore.Controllers
 
 		public ActionResult QuickSearch(string term)
 		{
-			// The JSON for autocomplete widget must return either both value and label propertied, or both the properties.
+			// The JSON for autocomplete widget must return either value property or label property, or both the properties.
 			var artists = GetArtists(term).Select(n => new { value = n.Name });
 			return Json(artists, JsonRequestBehavior.AllowGet);
 		}
