@@ -9,7 +9,7 @@ namespace MvcMusicStore.Controllers
     public class AjaxFormController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /AjaxForm/
 
         MusicStoreDb storeDB = new MusicStoreDb();
 

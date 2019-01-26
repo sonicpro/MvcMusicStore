@@ -9,7 +9,7 @@ namespace MvcMusicStore.Controllers
     public class ActionLinkController : Controller
     {
         //
-        // GET: /Home/
+        // GET: /ActionLink/
 
         MusicStoreDb storeDB = new MusicStoreDb();
 
