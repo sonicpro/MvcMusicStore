@@ -5,7 +5,6 @@ using System.Collections.Generic;
 
 namespace MvcMusicStore.Models
 {
-    [Bind(Exclude = "AlbumId")]
     public class Album
     {
         [ScaffoldColumn(false)]
