@@ -33,7 +33,11 @@ namespace MvcMusicStore
 
         protected void Application_Start()
         {
-        	Database.SetInitializer<MusicStoreDb>(new MusicStoreDbInitializer());
+            Database.SetInitializer<MusicStoreDb>(new MusicStoreDbInitializer());
+
+            // We do not have to add custom model binder for Album model globally.
+            // We can use [ModelBinder()] attribute instead in selected controller actions.
+            //ModelBinders.Binders.Add(typeof(Album), new AlbumModelBinder());
 
             AreaRegistration.RegisterAllAreas();
 

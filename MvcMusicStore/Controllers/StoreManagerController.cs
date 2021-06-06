@@ -46,7 +46,7 @@ namespace MvcMusicStore.Controllers
         // POST: /StoreManager/Create
 
         [HttpPost]
-        public ActionResult Create(Album album)
+        public ActionResult Create([ModelBinder(typeof(AlbumModelBinder))]Album album)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +75,7 @@ namespace MvcMusicStore.Controllers
         // POST: /StoreManager/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Album album)
+        public ActionResult Edit([ModelBinder(typeof(AlbumModelBinder))]Album album)
         {
             if (ModelState.IsValid)
             {

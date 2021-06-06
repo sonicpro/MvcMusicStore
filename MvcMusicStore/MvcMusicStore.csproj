@@ -89,6 +89,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\AlbumModelBinder.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Genre.cs" />
